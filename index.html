@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfone Digital - Chamar Morador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-home"></i>
+                <h1>Interfone Digital</h1>
+            </div>
+            <p class="tagline">Sistema moderno de comunicação</p>
+        </header>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Card de Informações -->
+            <div class="card info-card">
+                <div class="card-icon">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <h2 id="casa-titulo">Carregando informações...</h2>
+                <p class="card-subtitle" id="casa-subtitulo">Aguarde enquanto carregamos os dados</p>
+                
+                <div class="status-badge" id="status-badge">
+                    <i class="fas fa-circle"></i>
+                    <span>Verificando conexão...</span>
+                </div>
+            </div>
+
+            <!-- Card de Chamada -->
+            <div class="card call-card">
+                <div class="card-icon call-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Chamar Morador</h3>
+                <p class="call-description">
+                    Toque no botão abaixo para avisar o morador que você está na portaria
+                </p>
+                
+                <button id="chamar-btn" class="call-button" disabled>
+                    <i class="fas fa-phone"></i>
+                    <span>CARREGANDO...</span>
+                </button>
+                
+                <div class="call-info">
+                    <p><i class="fas fa-info-circle"></i> O morador receberá uma notificação no aplicativo</p>
+                </div>
+            </div>
+
+            <!-- Instruções -->
+            <div class="card instructions-card">
+                <h3><i class="fas fa-info-circle"></i> Como funciona</h3>
+                <ul class="instructions-list">
+                    <li><i class="fas fa-check-circle"></i> Escaneie o QR Code na portaria</li>
+                    <li><i class="fas fa-check-circle"></i> Confirme a casa/prédio na tela</li>
+                    <li><i class="fas fa-check-circle"></i> Toque em "Chamar Morador"</li>
+                    <li><i class="fas fa-check-circle"></i> Aguarde o morador atender</li>
+                </ul>
+            </div>
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <p>© 2024 Interfone Digital - Sistema seguro de comunicação</p>
+            <p class="footer-note">
+                <i class="fas fa-shield-alt"></i>
+                Sua privacidade é importante. Não armazenamos dados pessoais.
+            </p>
+        </footer>
+    </div>
+
+    <!-- Modal de Confirmação -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-check-circle"></i>
+                <h3>Chamada Enviada!</h3>
+            </div>
+            <div class="modal-body">
+                <p id="modal-message">A notificação foi enviada para o morador.</p>
+                <p class="modal-details">Ele receberá um alerta no aplicativo e responderá em breve.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="close-modal" class="modal-button">OK, Entendi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
